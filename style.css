@@ -1,0 +1,60 @@
+body {
+    background-color: rgb(60, 175, 175);
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
+.palavract {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#letra1, #letra2, #letra3, #letra4, #letra5, #letra6, #letra7 {
+    font-size: 30vh;
+    color: rgb(255, 255, 255);
+    text-shadow: -0.3vh 0 black, 0 0.3vh black, 0.3vh 0 black, 0 -0.3vh black;
+    position: absolute;
+    top: 60vh;
+    left: 70vh;
+    cursor: pointer;
+    margin: 0;
+}
+#letra2 {
+    top: 65vh;
+    left: 100vh;
+}
+#letra3 {
+    top: 65vh;
+    left: 130vh;
+}
+#letra4 {
+    top: 0vh;
+    left: 85vh;
+}
+#letra5 {
+    top: 60vh;
+    left: 20vh;
+}
+#letra6 {
+    top: 0vh;
+    left: 30vh;
+}
+#letra7 {
+    top: 5vh;
+    left: 150vh;
+}
+#palavra {
+    font-size: 30vh;
+    color: rgb(46, 46, 46);
+    text-shadow: -0.3vh 0 black, 0 0.3vh black, 0.3vh 0 black, 0 -0.3vh black;
+}
+html {
+    font-family: "Nunito", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+}
