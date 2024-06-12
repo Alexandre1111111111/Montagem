@@ -11,6 +11,26 @@ body {
     justify-content: center;
     align-items: center;
 }
+section.comeco{
+    background-color: rgb(44, 44, 44);
+    padding: 40px 4%;
+    border: 2px solid #444444;
+}
+section.comeco .flex{
+    align-items: center;
+    justify-content: center;
+    gap: 90px;
+}
+section.comeco .flex .txt-comeco h1{
+    color: #ffffff;
+    font-size: 50px;
+    font-family: 'Times New Roman', Times, serif;
+
+}
+section.comeco .flex .txt-comeco p{
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+}
 #letra1, #letra2, #letra3, #letra4, #letra5, #letra6, #letra7 {
     font-size: 30vh;
     color: rgb(255, 255, 255);

@@ -5,6 +5,9 @@ const letra4 = document.querySelector("#letra4");
 const letra5 = document.querySelector("#letra5");
 const letra6 = document.querySelector("#letra6");
 const letra7 = document.querySelector("#letra7");
+const horas = document.getElementById('horas');
+const minutos = document.getElementById('minutos');
+const segundos = document.getElementById('segundos');
 
 let act1 = false;
 let act2 = false;
@@ -83,3 +86,16 @@ setInterval(() => {
         act3 = true;
     }
 }, 10)
+
+const relogio = setInterval(function time() {
+  let dateToday = new Date();
+  let hr = dateToday.getHours();
+  let min = dateToday.getMinutes();
+  let seg = dateToday.getSeconds();
+
+  if (hr < 10) hr = '0' + hr;
+
+  if (min < 10) min = '0' + min;
+
+  if 
+})
