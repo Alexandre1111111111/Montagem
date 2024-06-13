@@ -1,6 +1,7 @@
 body {
     background-color: rgb(60, 175, 175);
     height: 100vh;
+    width: 100vw;
     margin: 0;
     overflow: hidden;
 }
@@ -11,27 +12,7 @@ body {
     justify-content: center;
     align-items: center;
 }
-section.comeco{
-    background-color: rgb(44, 44, 44);
-    padding: 40px 4%;
-    border: 2px solid #444444;
-}
-section.comeco .flex{
-    align-items: center;
-    justify-content: center;
-    gap: 90px;
-}
-section.comeco .flex .txt-comeco h1{
-    color: #ffffff;
-    font-size: 50px;
-    font-family: 'Times New Roman', Times, serif;
-
-}
-section.comeco .flex .txt-comeco p{
-    color: rgb(255, 255, 255);
-    font-size: 18px;
-}
-#letra1, #letra2, #letra3, #letra4, #letra5, #letra6, #letra7 {
+#letra1, #letra2, #letra3, #letra4, #letra5, #letra6, #letra7, #letra8, #letra9, #letra10, #letra11, #letra12, #letra13, #letra14, #letra15 {
     font-size: 30vh;
     color: rgb(255, 255, 255);
     text-shadow: -0.3vh 0 black, 0 0.3vh black, 0.3vh 0 black, 0 -0.3vh black;
@@ -65,10 +46,51 @@ section.comeco .flex .txt-comeco p{
     top: 5vh;
     left: 150vh;
 }
+#letra8 {
+    top: -5vh;
+    left: 50vh;
+}
+#letra9 {
+    top: 55vh;
+    left: 150vh;
+}
+#letra10 {
+    top: 55vh;
+    left: 40vh;
+}
+#letra11 {
+    top: 5vh;
+    left: 10vh;
+}
+#letra12 {
+    top: 0vh;
+    left: 130vh;
+}
+#letra13 {
+    top: 35vh;
+    left: 0vh;
+}
+#letra14 {
+    top: -5vh;
+    left: 185vh;
+}
+#letra15 {
+    top: 50vh;
+    left: 180vh;
+}
 #palavra {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#palavra h1 {
     font-size: 30vh;
     color: rgb(46, 46, 46);
     text-shadow: -0.3vh 0 black, 0 0.3vh black, 0.3vh 0 black, 0 -0.3vh black;
+    margin: 0;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
 }
 html {
     font-family: "Nunito", sans-serif;
@@ -77,4 +99,13 @@ html {
     user-select: none;
     -webkit-user-select: none;
     -moz-user-select: none;
+}
+
+@keyframes brilho {
+    0% {
+        text-shadow: -0.3vh 0 rgb(45, 250, 97), 0 0.3vh rgb(45, 250, 97), 0.3vh 0 rgb(45, 250, 97), 0 -0.3vh rgb(45, 250, 97);
+    }
+    100% {
+        text-shadow: -0.3vh 0 black, 0 0.3vh black, 0.3vh 0 black, 0 -0.3vh black;
+    }
 }
