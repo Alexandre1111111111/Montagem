@@ -101,6 +101,20 @@ html {
     -moz-user-select: none;
 }
 
+#timerCt {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 100%;
+}
+
+#timer {
+    font-size: 5vh;
+    color: #fff;
+    text-shadow: -0.3vh 0 black, 0 0.3vh black, 0.3vh 0 black, 0 -0.3vh black;
+}
+
 @keyframes brilho {
     0% {
         text-shadow: -0.3vh 0 rgb(45, 250, 97), 0 0.3vh rgb(45, 250, 97), 0.3vh 0 rgb(45, 250, 97), 0 -0.3vh rgb(45, 250, 97);

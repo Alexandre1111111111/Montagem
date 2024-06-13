@@ -20,6 +20,12 @@ const l4 = document.querySelector("#l4");
 const l5 = document.querySelector("#l5");
 const l6 = document.querySelector("#l6");
 const l7 = document.querySelector("#l7");
+const timer = document.querySelector("#timer");
+
+let mins = 1;
+let secs = 0;
+let paused = false;
+let intervalid;
 
 let act1 = false;
 let act2 = false;
@@ -260,17 +266,40 @@ setInterval(() => {
   }
 }, 10)
 
-const relogio = setInterval(function time() {
-  let dateToday = new Date();
-  let hr = dateToday.getHours();
-  let min = dateToday.getMinutes();
-  let seg = dateToday.getSeconds();
+intervalid = setInterval(updateTime, 1000);
 
-  if (hr < 10) {
-    hr = '0' + hr;
+function updateTime() {
+
+  secs--;
+
+  if (secs < 0) {
+    secs = 59;
+    mins--;
   }
 
-  if (min < 10) { 
-    min = '0' + min;
+  if(mins == 0 && secs == 0) {
+    pauseTimer();
+    clearInterval(intervalid);
   }
-})
+
+  secs = pad(secs);
+  mins = pad(mins);
+
+  timer.textContent = `${mins}:${secs}`;
+
+  function pad(unit) {
+    return (("0") + unit).length > 2 ? unit : "0" + unit;
+  }
+}
+
+function pauseTimer() {
+  paused = true;
+  clearInterval(intervalid);
+}
+
+function resetTimer() {
+  clearInterval(intervalid);
+  mins = 1;
+  secs = 0;
+  timer.textContent = "01:00";
+}
