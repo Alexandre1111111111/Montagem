@@ -27,6 +27,8 @@ let secs = 0;
 let paused = false;
 let intervalid;
 
+let reset = false;
+
 let act1 = false;
 let act2 = false;
 let act3 = false;
@@ -34,6 +36,18 @@ let act4 = false;
 let act5 = false;
 let act6 = false;
 let act7 = false;
+let act8 = false;
+let act9 = false;
+let act10 = false;
+let act11 = false;
+
+let ace1 = false;
+let ace2 = false;
+let ace3 = false;
+let ace4 = false;
+let ace5 = false;
+let ace6 = false;
+let ace7 = false;
 
 let acertos = 0;
 
@@ -46,6 +60,11 @@ let ac = false;
 let ac2 = false;
 let ac3 = false;
 
+let palavraal;
+
+let letra = 0;
+let palavra = 0;
+
 dragElement(letra1, 1);
 dragElement(letra2, 2);
 dragElement(letra3, 3);
@@ -53,14 +72,14 @@ dragElement(letra4, 4);
 dragElement(letra5, 5);
 dragElement(letra6, 6);
 dragElement(letra7, 7);
-dragElement(letra8, 0);
-dragElement(letra9, 0);
-dragElement(letra10, 0);
-dragElement(letra11, 0);
-dragElement(letra12, 0);
-dragElement(letra13, 0);
-dragElement(letra14, 0);
-dragElement(letra15, 0);
+dragElement(letra8, 8);
+dragElement(letra9, 9);
+dragElement(letra10, 10);
+dragElement(letra11, 11);
+dragElement(letra12, 12);
+dragElement(letra13, 13);
+dragElement(letra14, 14);
+dragElement(letra15, 15);
 
 function dragElement(elmnt, atl) {
     let pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
@@ -114,9 +133,25 @@ function dragElement(elmnt, atl) {
           at = 7;
           acerto(y, x);
         break;
+        case 8:
+          at = 8;
+          acerto(y, x);
+        break;
+        case 9:
+          at = 9;
+          acerto(y, x);
+        break;
+        case 10:
+          at = 10;
+          acerto(y, x);
+        break;
+        case 11:
+          at = 11;
+          acerto(y, x);
+        break;
       }
       elmnt.style.top = (e.clientY / 6.5) - 20 + "vh";
-      elmnt.style.left = (e.clientX / 6.5) - 10 + "vh";
+      elmnt.style.left = (e.clientX / 6.5) - 5 + "vh";
     }
   
     function closeDragElement() {
@@ -125,8 +160,57 @@ function dragElement(elmnt, atl) {
     }
 }
 
+mudar();
+
 function mudar() {
-  
+    letra++;
+    palavraal = Math.floor(Math.random() * 2) + 1;
+    l1.style.color = "rgb(46, 46, 46)";
+    l2.style.color = "rgb(46, 46, 46)";
+    l3.style.color = "rgb(46, 46, 46)";
+    l4.style.color = "rgb(46, 46, 46)";
+    l5.style.color = "rgb(46, 46, 46)";
+    l6.style.color = "rgb(46, 46, 46)";
+    l7.style.color = "rgb(46, 46, 46)";
+    ace1 = false;
+    ace2 = false;
+    ace3 = false;
+    ace4 = false;
+    ace5 = false;
+    ace6 = false;
+    ace7 = false;
+    ac = false;
+    ac2 = false;
+    ac3 = false;
+    reset = false;
+    letra1.style.display = "block";
+    letra2.style.display = "block";
+    letra3.style.display = "block";
+    letra4.style.display = "block";
+    letra5.style.display = "block";
+    letra6.style.display = "block";
+    letra7.style.display = "block";
+    letra8.style.display = "block";
+    letra9.style.display = "block";
+    letra10.style.display = "block";
+    letra11.style.display = "block";
+    letra12.style.display = "block";
+    letra13.style.display = "block";
+    letra14.style.display = "block";
+    letra15.style.display = "block";
+
+    switch (palavraal) {
+      case 1:
+        l1.textContent = "A";
+        l2.textContent = "B";
+        l3.textContent = "A";
+        l4.textContent = "C";
+        l5.textContent = "A";
+        l6.textContent = "X";
+        l7.textContent = "I";
+        palavra = 1;
+      break;
+    }
 }
 
 function stop() {
@@ -140,15 +224,50 @@ function stop() {
 }
 
 function acerto(y, x) {
-  if(x >= 20 && x <= 40 && y >= 15 && y <= 33 && at == 2) {
+  if(x >= 20 && x <= 40 && y >= 15 && y <= 33) {
+    if(ac == false) {
+      if(at == 1 && palavra == 1) {
+        letra1.style.display = "none";
+        l1.style.color = "#bbfccc";
+        act1 = true;
+        document.onmouseup = null;
+        document.onmousemove = null;
+        ac = true;
+        l1.style.animationName = "brilho";
+        ace1 = true;
+      }
+      else if(at == 3 && palavra == 1) {
+        letra3.style.display = "none";
+        l1.style.color = "#bbfccc";
+        act3 = true;
+        document.onmouseup = null;
+        document.onmousemove = null;
+        ac = true;
+        l1.style.animationName = "brilho";
+        ace1 = true;
+      }
+      else if(at == 4 && palavra == 1) {
+        letra4.style.display = "none";
+        l1.style.color = "#bbfccc";
+        act4 = true;
+        document.onmouseup = null;
+        document.onmousemove = null;
+        ac = true;
+        l1.style.animationName = "brilho";
+        ace1 = true;
+      }
+  }
+  if(palavra == 50 && at == 2) {
     letra2.style.display = "none";
     l1.style.color = "#bbfccc";
     act2 = true;
     l1.style.animationName = "brilho";
-  }
+    ace1 = true;
+    }
+}
   if(x >= 45 && x <= 60 && y >= 15 && y <= 35) {
     if(ac3 == false) {
-    if(at == 1) {
+    if(at == 1 && palavra == 50) {
       letra1.style.display = "none";
       l2.style.color = "#bbfccc";
       act1 = true;
@@ -156,8 +275,9 @@ function acerto(y, x) {
       document.onmousemove = null;
       ac3 = true;
       l2.style.animationName = "brilho";
+      ace2 = true;
     }
-    else if(at == 3) {
+    else if(at == 3 && palavra == 50) {
       letra3.style.display = "none";
       l2.style.color = "#bbfccc";
       act3 = true;
@@ -165,8 +285,9 @@ function acerto(y, x) {
       document.onmousemove = null;
       ac3 = true;
       l2.style.animationName = "brilho";
+      ace2 = true;
     }
-    else if(at == 4) {
+    else if(at == 4 && palavra == 50) {
       letra4.style.display = "none";
       l2.style.color = "#bbfccc";
       act4 = true;
@@ -174,18 +295,63 @@ function acerto(y, x) {
       document.onmousemove = null;
       ac3 = true;
       l2.style.animationName = "brilho";
+      ace2 = true;
     }
   }
+  if(at == 8 && palavra == 1) {
+    letra8.style.display = "none";
+    l2.style.color = "#bbfccc";
+    act8 = true;
+    document.onmouseup = null;
+    document.onmousemove = null;
+    l2.style.animationName = "brilho";
+    ace2 = true;
   }
-  if(x >= 65 && x <= 75 && y >= 15 && y <= 35 && at == 5) {
+  }
+  if(x >= 65 && x <= 75 && y >= 15 && y <= 35) {
+    if(ac2 == false) {
+      if(at == 1 && palavra == 1) {
+        letra1.style.display = "none";
+        l3.style.color = "#bbfccc";
+        act1 = true;
+        document.onmouseup = null;
+        document.onmousemove = null;
+        ac2 = true;
+        l3.style.animationName = "brilho";
+        ace3 = true;
+      }
+      else if(at == 3 && palavra == 1) {
+        letra3.style.display = "none";
+        l3.style.color = "#bbfccc";
+        act3 = true;
+        document.onmouseup = null;
+        document.onmousemove = null;
+        ac2 = true;
+        l3.style.animationName = "brilho";
+        ace3 = true;
+      }
+      else if(at == 4 && palavra == 1) {
+        letra4.style.display = "none";
+        l3.style.color = "#bbfccc";
+        act4 = true;
+        document.onmouseup = null;
+        document.onmousemove = null;
+        ac2 = true;
+        l3.style.animationName = "brilho";
+        ace3 = true;
+      }
+    else if(palavra == 50 && at == 5) {
     letra5.style.display = "none";
     l3.style.color = "#bbfccc";
     act5 = true;
     l3.style.animationName = "brilho";
+    ace3 = true;
+    }
   }
+}
   if(x >= 90 && x <= 110 && y >= 30 && y <= 45) {
     if(ac2 == false) {
-    if(at == 1) {
+    if(at == 1 && palavra == 50) {
       letra1.style.display = "none";
       l4.style.color = "#bbfccc";
       act1 = true;
@@ -193,8 +359,9 @@ function acerto(y, x) {
       document.onmousemove = null;
       ac2 = true;
       l4.style.animationName = "brilho";
+      ace4 = true;
     }
-    else if(at == 3) {
+    else if(at == 3 && palavra == 50) {
       letra3.style.display = "none";
       l4.style.color = "#bbfccc";
       act3 = true;
@@ -202,8 +369,9 @@ function acerto(y, x) {
       document.onmousemove = null;
       ac2 = true;
       l4.style.animationName = "brilho";
+      ace4 = true;
     }
-    else if(at == 4) {
+    else if(at == 4 && palavra == 50) {
       letra4.style.display = "none";
       l4.style.color = "#bbfccc";
       act4 = true;
@@ -211,24 +379,85 @@ function acerto(y, x) {
       document.onmousemove = null;
       ac2 = true;
       l4.style.animationName = "brilho";
+      ace4 = true;
     }
   }
+  if(at == 9 && palavra == 1) {
+    letra9.style.display = "none";
+    l4.style.color = "#bbfccc";
+    act9 = true;
+    document.onmouseup = null;
+    document.onmousemove = null;
+    l4.style.animationName = "brilho";
+    ace4 = true;
   }
-  if(x >= 110 && x <= 130 && y >= 30 && y <= 45 && at == 6) {
+  }
+  if(x >= 110 && x <= 130 && y >= 30 && y <= 45) {
+    if(ac3 == false) {
+      if(at == 1 && palavra == 1) {
+        letra1.style.display = "none";
+        l5.style.color = "#bbfccc";
+        act1 = true;
+        document.onmouseup = null;
+        document.onmousemove = null;
+        ac3 = true;
+        l5.style.animationName = "brilho";
+        ace5 = true;
+      }
+      else if(at == 3 && palavra == 1) {
+        letra3.style.display = "none";
+        l5.style.color = "#bbfccc";
+        act3 = true;
+        document.onmouseup = null;
+        document.onmousemove = null;
+        ac3 = true;
+        l5.style.animationName = "brilho";
+        ace5 = true;
+      }
+      else if(at == 4 && palavra == 1) {
+        letra4.style.display = "none";
+        l5.style.color = "#bbfccc";
+        act4 = true;
+        document.onmouseup = null;
+        document.onmousemove = null;
+        ac3 = true;
+        l5.style.animationName = "brilho";
+        ace5 = true;
+      }
+    else if(palavra == 50 && at == 6) {
     letra6.style.display = "none";
     l5.style.color = "#bbfccc";
     act6 = true;
+    document.onmouseup = null;
+    document.onmousemove = null;
     l5.style.animationName = "brilho";
+    ace5 = true;
+    }
   }
-  if(x >= 130 && x <= 150 && y >= 30 && y <= 45 && at == 7) {
+}
+  if(x >= 130 && x <= 150 && y >= 30 && y <= 45) {
+    if(palavra == 50 && at == 7) {
     letra7.style.display = "none";
     l6.style.color = "#bbfccc";
     act7 = true;
+    document.onmouseup = null;
+    document.onmousemove = null;
     l6.style.animationName = "brilho";
+    ace6 = true;
+    }
+    else if(palavra == 1 && at == 10) {
+      letra10.style.display = "none";
+      l6.style.color = "#bbfccc";
+      document.onmouseup = null;
+      document.onmousemove = null;
+      act10 = true;
+      l6.style.animationName = "brilho";
+      ace6 = true;
+    }
   }
   if(x >= 150 && x <= 170 && y >= 30 && y <= 45) {
     if(ac == false) {
-    if(at == 1) {
+    if(at == 1 && palavra == 50) {
       letra1.style.display = "none";
       l7.style.color = "#bbfccc";
       act1 = true;
@@ -236,8 +465,9 @@ function acerto(y, x) {
       document.onmousemove = null;
       ac = true;
       l7.style.animationName = "brilho";
+      ace7 = true;
     }
-    else if(at == 3) {
+    else if(at == 3 && palavra == 50) {
       letra3.style.display = "none";
       l7.style.color = "#bbfccc";
       act3 = true;
@@ -245,8 +475,9 @@ function acerto(y, x) {
       document.onmousemove = null;
       ac = true;
       l7.style.animationName = "brilho";
+      ace7 = true;
     }
-    else if(at == 4) {
+    else if(at == 4 && palavra == 50) {
       letra4.style.display = "none";
       l7.style.color = "#bbfccc";
       act4 = true;
@@ -254,15 +485,27 @@ function acerto(y, x) {
       document.onmousemove = null;
       ac = true;
       l7.style.animationName = "brilho";
+      ace7 = true;
     }
+  }
+  if(palavra == 1 && at == 11) {
+    letra11.style.display = "none";
+    l7.style.color = "#bbfccc";
+    act11 = true;
+    document.onmouseup = null;
+    document.onmousemove = null;
+    l7.style.animationName = "brilho";
+    ace7 = true;
   }
   }
 }
 
 setInterval(() => {
-  if(act1 == true && act2 == true && act3 == true && act4 == true && act5 == true && act6 == true && act7 == true) {
+  if(ace1 == true && ace2 == true && ace3 == true && ace4 == true && ace5 == true && ace6 == true && ace7 == true && reset == false) {
     acertos++;
     setTimeout(stop, 1000);
+    setTimeout(mudar, 1000)
+    reset = true;
   }
 }, 10)
 
