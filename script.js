@@ -21,10 +21,12 @@ const l5 = document.querySelector("#l5");
 const l6 = document.querySelector("#l6");
 const l7 = document.querySelector("#l7");
 const timer = document.querySelector("#timer");
+const acc = document.querySelector("#acc");
+const pt = document.querySelector("#pt");
 
 let mins = 1;
 let secs = 0;
-let paused = false;
+let paused = true;
 let intervalid;
 
 let reset = false;
@@ -50,6 +52,7 @@ let ace6 = false;
 let ace7 = false;
 
 let acertos = 0;
+let pontos = 0;
 
 let atl;
 let at;
@@ -102,56 +105,56 @@ function dragElement(elmnt, atl) {
       pos2 = pos4 - e.clientY;
       pos3 = e.clientX;
       pos4 = e.clientY;
-      x = (e.clientX / 6) - 20;
-      y = (e.clientY / 6) - 20;
+      x = window.innerWidth;
+      y = window.innerHeight / 2;
       switch (atl) {
         case 1:
           at = 1;
-          acerto(y, x);
+          acerto(y, x, e);
         break;
         case 2:
           at = 2;
-          acerto(y, x);
+          acerto(y, x, e);
         break;
         case 3:
           at = 3;
-          acerto(y, x);
+          acerto(y, x, e);
         break;
         case 4:
           at = 4;
-          acerto(y, x);
+          acerto(y, x, e);
         break;
         case 5:
           at = 5;
-          acerto(y, x);
+          acerto(y, x, e);
         break;
         case 6:
           at = 6;
-          acerto(y, x);
+          acerto(y, x, e);
         break;
         case 7:
           at = 7;
-          acerto(y, x);
+          acerto(y, x, e);
         break;
         case 8:
           at = 8;
-          acerto(y, x);
+          acerto(y, x, e);
         break;
         case 9:
           at = 9;
-          acerto(y, x);
+          acerto(y, x, e);
         break;
         case 10:
           at = 10;
-          acerto(y, x);
+          acerto(y, x, e);
         break;
         case 11:
           at = 11;
-          acerto(y, x);
+          acerto(y, x, e);
         break;
       }
-      elmnt.style.top = (e.clientY / 6.5) - 20 + "vh";
-      elmnt.style.left = (e.clientX / 6.5) - 5 + "vh";
+      elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+      elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
     }
   
     function closeDragElement() {
@@ -164,7 +167,13 @@ mudar();
 
 function mudar() {
     letra++;
-    palavraal = Math.floor(Math.random() * 2) + 1;
+    acc.textContent = `${acertos} / 26`;
+    mins = 1;
+    secs = 0;
+    palavraal = Math.floor(Math.random() * 1) + 1;
+    if(paused == true) {
+      intervalid = setInterval(updateTime, 1000);
+    }
     l1.style.color = "rgb(46, 46, 46)";
     l2.style.color = "rgb(46, 46, 46)";
     l3.style.color = "rgb(46, 46, 46)";
@@ -221,10 +230,14 @@ function stop() {
     l5.style.animationName = "unset";
     l6.style.animationName = "unset";
     l7.style.animationName = "unset";
+    letra3.style.top = "65vh";
+    letra3.style.left = "130vh";
+    letra4.style.top = "0vh";
+    letra4.style.left = "85vh";
 }
 
-function acerto(y, x) {
-  if(x >= 20 && x <= 40 && y >= 15 && y <= 33) {
+function acerto(y, x, e) {
+  if(e.clientX >= (x / 4) - 200 && e.clientX <= (x / 4) + 50 && e.clientY >= y - 50 && e.clientY <= y + 50) {
     if(ac == false) {
       if(at == 1 && palavra == 1) {
         letra1.style.display = "none";
@@ -265,7 +278,7 @@ function acerto(y, x) {
     ace1 = true;
     }
 }
-  if(x >= 45 && x <= 60 && y >= 15 && y <= 35) {
+  if(e.clientX >= (x / 3) - 50 && e.clientX <= (x / 3) + 50 && e.clientY >= y - 50 && e.clientY <= y + 50) {
     if(ac3 == false) {
     if(at == 1 && palavra == 50) {
       letra1.style.display = "none";
@@ -308,7 +321,7 @@ function acerto(y, x) {
     ace2 = true;
   }
   }
-  if(x >= 65 && x <= 75 && y >= 15 && y <= 35) {
+  if(e.clientX >= (x / 2.3) - 50 && e.clientX <= (x / 2) && e.clientY >= y && e.clientY <= y + 50) {
     if(ac2 == false) {
       if(at == 1 && palavra == 1) {
         letra1.style.display = "none";
@@ -349,7 +362,7 @@ function acerto(y, x) {
     }
   }
 }
-  if(x >= 90 && x <= 110 && y >= 30 && y <= 45) {
+  if(e.clientX >= (x / 2) - 150 && e.clientX <= (x / 2) + 150 && e.clientY >= y - 50 && e.clientY <= y + 50) {
     if(ac2 == false) {
     if(at == 1 && palavra == 50) {
       letra1.style.display = "none";
@@ -392,7 +405,7 @@ function acerto(y, x) {
     ace4 = true;
   }
   }
-  if(x >= 110 && x <= 130 && y >= 30 && y <= 45) {
+  if(e.clientX >= (x / 1.6) - 100 && e.clientX <= (x / 1.6) + 50 && e.clientY >= y - 50 && e.clientY <= y + 50) {
     if(ac3 == false) {
       if(at == 1 && palavra == 1) {
         letra1.style.display = "none";
@@ -435,7 +448,7 @@ function acerto(y, x) {
     }
   }
 }
-  if(x >= 130 && x <= 150 && y >= 30 && y <= 45) {
+  if(e.clientX >= (x * 0.75) - 50 && e.clientX <= (x * 0.75) + 50 && e.clientY >= y - 50 && e.clientY <= y + 50) {
     if(palavra == 50 && at == 7) {
     letra7.style.display = "none";
     l6.style.color = "#bbfccc";
@@ -455,7 +468,7 @@ function acerto(y, x) {
       ace6 = true;
     }
   }
-  if(x >= 150 && x <= 170 && y >= 30 && y <= 45) {
+  if(e.clientX >= (x * 0.80) - 50 && e.clientX <= (x * 0.80) + 50 && e.clientY >= y - 50 && e.clientY <= y + 50) {
     if(ac == false) {
     if(at == 1 && palavra == 50) {
       letra1.style.display = "none";
@@ -503,13 +516,31 @@ function acerto(y, x) {
 setInterval(() => {
   if(ace1 == true && ace2 == true && ace3 == true && ace4 == true && ace5 == true && ace6 == true && ace7 == true && reset == false) {
     acertos++;
+    switch(true) {
+      case secs >= 50:
+        pontos += 100;
+      break;
+      case secs >= 40:
+        pontos += 80;
+      break;
+      case secs >= 30:
+        pontos += 60;
+      break;
+      case secs >= 20:
+        pontos += 40;
+      break;
+      case secs >= 10:
+        pontos += 20;
+      break;
+    }
     setTimeout(stop, 1000);
     setTimeout(mudar, 1000)
     reset = true;
+    timer.textContent = "01:00";
+    pt.textContent = pontos;
+    pauseTimer();
   }
 }, 10)
-
-intervalid = setInterval(updateTime, 1000);
 
 function updateTime() {
 
