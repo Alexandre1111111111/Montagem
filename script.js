@@ -24,6 +24,8 @@ const timer = document.querySelector("#timer");
 const acc = document.querySelector("#acc");
 const pt = document.querySelector("#pt");
 
+const letras = ["A", "B" , "C" , "D" , "E" , "F" , "G" , "H" , "I" , "J" , "K" , "L" , "M", "N", "O","P","Q","R", "S", "T", "U", "V", "W", "X", "Y","Z"
+]
 let mins = 1;
 let secs = 0;
 let paused = true;
@@ -65,7 +67,7 @@ let ac3 = false;
 
 let palavraal;
 
-let letra = 0;
+let letra;
 let palavra = 0;
 
 dragElement(letra1, 1);
@@ -170,7 +172,7 @@ function mudar() {
     acc.textContent = `${acertos} / 26`;
     mins = 1;
     secs = 0;
-    palavraal = Math.floor(Math.random() * 1) + 1;
+    palavraal = Math.floor(Math.random() * 2) + 1;
     if(paused == true) {
       intervalid = setInterval(updateTime, 1000);
     }
@@ -208,8 +210,8 @@ function mudar() {
     letra14.style.display = "block";
     letra15.style.display = "block";
 
-    switch (palavraal) {
-      case 1:
+    for (let i = 0; i < letras.length; i++) {
+    if(palavraal == 1) {
         l1.textContent = "A";
         l2.textContent = "B";
         l3.textContent = "A";
@@ -218,8 +220,8 @@ function mudar() {
         l6.textContent = "X";
         l7.textContent = "I";
         palavra = 1;
-      break;
     }
+}
 }
 
 function stop() {
