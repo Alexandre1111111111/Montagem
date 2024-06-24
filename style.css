@@ -24,6 +24,9 @@ body {
     left: 70vh;
     cursor: pointer;
     margin: 0;
+    animation-name: mover;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
 }
 #letra2 {
     top: 65vh;
@@ -86,7 +89,7 @@ body {
     justify-content: center;
     align-items: center;
 }
-#palavra h1 {
+#palavra span {
     font-size: 30vh;
     color: rgb(46, 46, 46);
     text-shadow: -0.3vh 0 black, 0 0.3vh black, 0.3vh 0 black, 0 -0.3vh black;
@@ -94,6 +97,7 @@ body {
     animation-duration: 1s;
     animation-fill-mode: forwards;
     animation-timing-function: linear;
+    font-weight: 700;
 }
 html {
     font-family: "Nunito", sans-serif;
@@ -152,6 +156,45 @@ html {
     right: 0;
 }
 
+#letraCt {
+    width: 25vh;
+    height: 10vh;
+    background-color: rgb(236, 126, 48);
+    border: 0.5vh solid #813508;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    border-top-left-radius: 3vh;
+    z-index: 100;
+    right: 0;
+    bottom: 0;
+}
+
+#letrap {
+    width: fit-content;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+    transition-duration: 1s;
+}
+
+#letrap div {
+    height: 100%;
+    width: fit-content;
+    padding: 2.5vh;
+    border: 0.5vh solid #813508;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 8vh;
+    color: rgb(255, 255, 255);
+    text-shadow: -0.3vh 0 black, 0 0.3vh black, 0.3vh 0 black, 0 -0.3vh black;
+    background-color: #81340841;
+    margin: 0;
+}
+
 #pt {
     color: #ffffff;
     text-shadow: -0.1vh 0 black, 0 0.1vh black, 0.1vh 0 black, 0 -0.1vh black;
@@ -164,5 +207,16 @@ html {
     }
     100% {
         text-shadow: -0.3vh 0 black, 0 0.3vh black, 0.3vh 0 black, 0 -0.3vh black;
+    }
+}
+@keyframes mover {
+    0% {
+        transform: translateY(5px);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+    100% {
+        transform: translateY(5px);
     }
 }
