@@ -25,6 +25,7 @@ const ppalavra = document.querySelector("#palavra");
 const letrap = document.querySelector("#letrap");
 const acc = document.querySelector("#acc");
 const pt = document.querySelector("#pt");
+const acm = new Audio("1.mp3");
 
 let mins = 1;
 let secs = 0;
@@ -1022,6 +1023,9 @@ function updateTime() {
 function pauseTimer() {
   paused = true;
   clearInterval(intervalid);
+  acm.currentTime = 0;
+  acm.volume = 0.5;
+  acm.play();
 }
 
 function resetTimer() {
