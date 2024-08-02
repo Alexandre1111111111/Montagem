@@ -205,7 +205,7 @@ function mudar() {
     acc.textContent = `${acertos} / 26`;
     mins = 1;
     secs = 0;
-    palavraal = Math.floor(Math.random() * 3) + 1;
+    palavraal = Math.floor(Math.random() * 1) + 1;
     if(paused == true) {
       intervalid = setInterval(updateTime, 1000);
     }
@@ -326,6 +326,23 @@ function mudar() {
       break;
     }
     break;
+    case 3:
+      switch (palavraal) {
+        case 1:
+          l1.textContent = "C";
+          l2.textContent = "O";
+          l3.textContent = "Z";
+          l4.textContent = "I";
+          l5.textContent = "N";
+          l6.textContent = "H";
+          l7.textContent = "A";
+          palavra = 7;
+          letra7.textContent = "Z";
+          letra15.textContent = "H";
+          letra1.textContent = "O";
+          break;
+      }
+        break;
   }
 }
 
@@ -1025,7 +1042,9 @@ function pauseTimer() {
   clearInterval(intervalid);
   acm.currentTime = 0;
   acm.volume = 0.5;
+  if(secs > 0) {
   acm.play();
+  }
 }
 
 function resetTimer() {

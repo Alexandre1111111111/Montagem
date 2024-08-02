@@ -23,7 +23,7 @@ body {
     position: absolute;
     top: 60vh;
     left: 70vh;
-    cursor: pointer;
+    cursor: url(cursor.png),auto;
     margin: 0;
     animation-name: mover;
     animation-duration: 5s;
