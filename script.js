@@ -340,11 +340,97 @@ function mudar() {
           letra7.textContent = "Z";
           letra15.textContent = "H";
           letra1.textContent = "O";
-          break;
-      }
+
         break;
-  }
-}
+        case 3:
+          switch (palavraal) {
+            case 1:
+              l1.textContent = "C";
+              l2.textContent = "O";
+              l3.textContent = "Z";
+              l4.textContent = "I";
+              l5.textContent = "N";
+              l6.textContent = "H";
+              l7.textContent = "A";
+              palavra = 7;
+              letra7.textContent = "Z";
+              letra15.textContent = "H";
+              letra1.textContent = "O";
+              break;
+          }
+          break;
+          case 4:
+          switch (palavraal) {
+            case 1:
+              l1.textContent = "D";
+              l2.textContent = "R";
+              l3.textContent = "A";
+              l4.textContent = "G";
+              l5.textContent = "Ã";
+              l6.textContent = "O";
+              l7.textContent = "";
+              palavra = 7;
+              letra7.textContent = "B";
+              letra15.textContent = "N";
+              letra1.textContent = "A";
+              break;
+          }
+            break;
+            case 5:
+          switch (palavraal) {
+            case 1:
+              l1.textContent = "E";
+              l2.textContent = "V";
+              l3.textContent = "E";
+              l4.textContent = "N";
+              l5.textContent = "T";
+              l6.textContent = "O";
+              l7.textContent = "";
+              palavra = 7;
+              letra7.textContent = "E";
+              letra15.textContent = "V";
+              letra1.textContent = "T";
+              break;
+          }
+            break;
+            case 6:
+          switch (palavraal) {
+            case 1:
+              l1.textContent = "F";
+              l2.textContent = "A";
+              l3.textContent = "C";
+              l4.textContent = "A";
+              l5.textContent = "";
+              l6.textContent = "";
+              l7.textContent = "";
+              palavra = 7;
+              letra7.textContent = "B";
+              letra15.textContent = "N";
+              letra1.textContent = "A";
+              break;
+              
+          }
+          break;
+            case 7:
+            switch (palavraal) {
+            case 1:
+              l1.textContent = "G";
+              l2.textContent = "A";
+              l3.textContent = "I";
+              l4.textContent = "O";
+              l5.textContent = "L";
+              l6.textContent = "A";
+              l7.textContent = "";
+              palavra = 7;
+              letra7.textContent = "G";
+              letra15.textContent = "I";
+              letra1.textContent = "L";
+              break;
+            
+              
+          }
+          break;
+
 
 function stop() {
     l1.style.animationName = "unset";
