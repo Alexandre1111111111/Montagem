@@ -390,7 +390,7 @@ function acerto(y, x, xe, ye) {
 
   ////////////////////////////////////////// 1
 
-  if(xe >= (x / 5) - 50 && xe <= (x / 5) + 50 && ye >= y - 50 && ye <= y + 50) {
+  if(xe >= (x / 5) - 150 && xe <= (x / 5) + 70 && ye >= y - 80 && ye <= y + 50) {
     if(ac == false) {
       if(at == 1 && palavra == 1 || at == 1 && palavra == 2) {
         letra1.style.display = "none";
@@ -540,7 +540,7 @@ function acerto(y, x, xe, ye) {
   
   ////////////////////////////////////////// 3
 
-  if(xe >= (x / 2.6) - 50 && xe <= (x / 2.6) + 50 && ye >= y - 50 && ye <= y + 50) {
+  if(xe >= (x / 2.6) - 50 && xe <= (x / 2.6) + 50 && ye >= y - 70 && ye <= y + 50) {
     if(ac2 == false) {
       if(at == 1 && palavra == 1 || at == 1 && palavra == 4) {
         letra1.style.display = "none";
@@ -605,7 +605,7 @@ function acerto(y, x, xe, ye) {
 
   ////////////////////////////////////////// 4
 
-  if(xe >= (x / 2) - 50 && xe <= (x / 2) + 50 && ye >= y - 50 && ye <= y + 50) {
+  if(xe >= (x / 2) - 50 && xe <= (x / 2) + 50 && ye >= y - 70 && ye <= y + 50) {
     if(ac2 == false) {
     if(at == 1 && palavra == 50) {
       letra1.style.display = "none";
@@ -710,7 +710,7 @@ function acerto(y, x, xe, ye) {
   
   ////////////////////////////////////////// 5
 
-  if(xe >= (x / 1.6) - 50 && xe <= (x / 1.6) + 50 && ye >= y - 50 && ye <= y + 50) {
+  if(xe >= (x / 1.7) - 50 && xe <= (x / 1.7) + 100 && ye >= y - 50 && ye <= y + 30) {
     if(ac3 == false) {
       if(at == 1 && palavra == 1) {
         letra1.style.display = "none";
@@ -786,7 +786,7 @@ function acerto(y, x, xe, ye) {
 
   ////////////////////////////////////////// 6
 
-  if(xe >= (x * 0.7) - 50 && xe <= (x * 0.7) + 50 && ye >= y - 50 && ye <= y + 50) {
+  if(xe >= (x * 0.7) - 50 && xe <= (x * 0.7) + 50 && ye >= y - 100 && ye <= y + 50) {
     if(ac3 == false) {
       if(at == 1 && palavra == 2) {
         letra1.style.display = "none";
@@ -859,7 +859,7 @@ function acerto(y, x, xe, ye) {
   
   ////////////////////////////////////////// 7
 
-  if(xe >= (x * 0.80) - 50 && xe <= (x * 0.80) + 50 && ye >= y - 50 && ye <= y + 50) {
+  if(xe >= (x * 0.80) - 70 && xe <= (x * 0.80) + 70 && ye >= y - 70 && ye <= y + 70) {
     if(ac == false) {
     if(at == 1 && palavra == 50) {
       letra1.style.display = "none";
