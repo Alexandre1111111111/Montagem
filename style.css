@@ -17,7 +17,7 @@ body {
     align-items: center;
 }
 #letra1, #letra2, #letra3, #letra4, #letra5, #letra6, #letra7, #letra8, #letra9, #letra10, #letra11, #letra12, #letra13, #letra14, #letra15 {
-    font-size: 1200%;
+    font-size: 30vh;
     color: rgb(255, 255, 255);
     text-shadow: -0.3vh 0 black, 0 0.3vh black, 0.3vh 0 black, 0 -0.3vh black;
     position: absolute;
@@ -91,7 +91,7 @@ body {
     align-items: center;
 }
 #palavra span {
-    font-size: 1200%;
+    font-size: 30vh;
     color: rgb(46, 46, 46);
     text-shadow: -0.3vh 0 black, 0 0.3vh black, 0.3vh 0 black, 0 -0.3vh black;
     margin: 0;
