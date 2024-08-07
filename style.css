@@ -17,7 +17,7 @@ body {
     align-items: center;
 }
 #letra1, #letra2, #letra3, #letra4, #letra5, #letra6, #letra7, #letra8, #letra9, #letra10, #letra11, #letra12, #letra13, #letra14, #letra15 {
-    font-size: 30vh;
+    font-size: 1200%;
     color: rgb(255, 255, 255);
     text-shadow: -0.3vh 0 black, 0 0.3vh black, 0.3vh 0 black, 0 -0.3vh black;
     position: absolute;
@@ -79,11 +79,11 @@ body {
 }
 #letra14 {
     top: -5vh;
-    left: 185vh;
+    left: 165vh;
 }
 #letra15 {
-    top: 50vh;
-    left: 180vh;
+    top: 70vh;
+    left: 160vh;
 }
 #palavra {
     display: flex;
@@ -91,7 +91,7 @@ body {
     align-items: center;
 }
 #palavra span {
-    font-size: 30vh;
+    font-size: 1200%;
     color: rgb(46, 46, 46);
     text-shadow: -0.3vh 0 black, 0 0.3vh black, 0.3vh 0 black, 0 -0.3vh black;
     margin: 0;
@@ -158,8 +158,8 @@ html {
 }
 
 #letraCt {
-    width: 25vh;
-    height: 10vh;
+    width: 12vh;
+    height: 12vh;
     background-color: rgb(236, 126, 48);
     border: 0.5vh solid #813508;
     position: absolute;
@@ -189,7 +189,7 @@ html {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 8vh;
+    font-size: 10vh;
     color: rgb(255, 255, 255);
     text-shadow: -0.3vh 0 black, 0 0.3vh black, 0.3vh 0 black, 0 -0.3vh black;
     background-color: #81340841;
