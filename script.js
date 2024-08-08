@@ -376,6 +376,7 @@ function mudar() {
               letra7.textContent = "E";
               letra15.textContent = "V";
               letra1.textContent = "T";
+              letra3.textContent = "E";
               break;
           }
             break;
