@@ -26,11 +26,20 @@ const letrap = document.querySelector("#letrap");
 const acc = document.querySelector("#acc");
 const pt = document.querySelector("#pt");
 const acm = new Audio("1.mp3");
+const acerta = document.querySelector("#acerta");
+const tempo = document.querySelector("#tempo");
+const ponto = document.querySelector("#ponto");
+const fim = document.querySelector("#fim");
 
 let mins = 1;
 let secs = 0;
 let paused = true;
 let intervalid;
+
+let mins2 = 0;
+let secs2 = 0;
+let paused2 = false;
+let intervalid2;
 
 let reset = false;
 
@@ -193,13 +202,15 @@ function dragElement(elmnt, atl) {
 
 mudar();
 
+intervalid2 = setInterval(updateTime2, 1000);
+
 function mudar() {
     letra++;
-    if(letrap.style.right != "") {
+    if(letrap.style.right != "" && acertos != 6) {
     lt += 12.7;
     }
     letrap.style.right = lt + "vh";
-    acc.textContent = `${acertos} / 26`;
+    acc.textContent = `${acertos} / 6`;
     mins = 1;
     secs = 0;
     palavraal = 1; 
@@ -1347,7 +1358,39 @@ setInterval(() => {
     pauseTimer();
     break;
   }
+  if(acertos == 6) {
+    setTimeout(() => {
+    clearInterval(intervalid);
+    ponto.textContent = `Total de pontos: ${pontos}`;
+    acerta.textContent = `Você acertou ${acertos} palavras.`;
+    fim.style.display = "flex";
+    l1.textContent = "";
+    l2.textContent = "";
+    l3.textContent = "";
+    l4.textContent = "";
+    pauseTimer2();
+    }, 1000);
+  }
 }, 10)
+
+function updateTime2() {
+
+  secs2++;
+
+  if (secs2 > 59) {
+    secs2 = 0;
+    mins2++;
+  }
+
+  secs2 = pad(secs2);
+  mins2 = pad(mins2);
+
+  tempo.textContent = `Tempo: ${mins2}:${secs2}`;
+
+  function pad(unit) {
+    return (("0") + unit).length > 2 ? unit : "0" + unit;
+  }
+}
 
 function updateTime() {
 
@@ -1381,6 +1424,10 @@ function pauseTimer() {
   if(secs > 0) {
   acm.play();
   }
+}
+function pauseTimer2() {
+  paused2 = true;
+  clearInterval(intervalid2);
 }
 
 function resetTimer() {
