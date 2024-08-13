@@ -411,6 +411,405 @@ function mudar() {
               break;
           }
           break;
+          case 7:
+          switch (palavraal) {
+            case 1:
+              l1.textContent = "G";
+              l2.textContent = "A";
+              l3.textContent = "T";
+              l4.textContent = "O";
+              l5.textContent = "";
+              l6.textContent = "";
+              l7.textContent = "";
+              palavra = 19;
+              letra7.textContent = "G";
+              letra15.textContent = "A";
+              letra1.textContent = "T";
+              letra9.textContent = "O";
+              letra4.textContent = "A";
+              letra3.textContent = "A";
+              break;
+          }
+          break;
+          case 8:
+          switch (palavraal) {
+            case 1:
+              l1.textContent = "H";
+              l2.textContent = "I";
+              l3.textContent = "N";
+              l4.textContent = "O";
+              l5.textContent = "";
+              l6.textContent = "";
+              l7.textContent = "";
+              palavra = 21;
+              letra7.textContent = "H";
+              letra15.textContent = "I";
+              letra1.textContent = "N";
+              letra9.textContent = "O";
+              letra4.textContent = "A";
+              letra3.textContent = "S";
+              break;
+          }
+          break;
+          case 9:
+          switch (palavraal) {
+            case 1:
+              l1.textContent = "i";
+              l2.textContent = "M";
+              l3.textContent = "Ã";
+              l4.textContent = "";
+              l5.textContent = "";
+              l6.textContent = "";
+              l7.textContent = "";
+              palavra = 24;
+              letra7.textContent = "I";
+              letra15.textContent = "M";
+              letra1.textContent = "Ã";
+              letra9.textContent = "F";
+              letra4.textContent = "A";
+              letra3.textContent = "A";
+              break;
+          }
+          break;
+          case 10:
+          switch (palavraal) {
+            case 1:
+              l1.textContent = "J";
+              l2.textContent = "A";
+              l3.textContent = "C";
+              l4.textContent = "A";
+              l5.textContent = "";
+              l6.textContent = "";
+              l7.textContent = "";
+              palavra = 27;
+              letra7.textContent = "J";
+              letra15.textContent = "A";
+              letra1.textContent = "C";
+              letra9.textContent = "O";
+              letra4.textContent = "A";
+              letra3.textContent = "A";
+              break;
+          }
+          break;
+          case 11:
+          switch (palavraal) {
+            case 1:
+              l1.textContent = "K";
+              l2.textContent = "I";
+              l3.textContent = "W";
+              l4.textContent = "I";
+              l5.textContent = "";
+              l6.textContent = "";
+              l7.textContent = "";
+              palavra = 30;
+              letra7.textContent = "K";
+              letra15.textContent = "I";
+              letra1.textContent = "W";
+              letra9.textContent = "C";
+              letra4.textContent = "A";
+              letra3.textContent = "A";
+              break;
+          }
+          break;
+          case 12:
+          switch (palavraal) {
+            case 1:
+              l1.textContent = "L";
+              l2.textContent = "U";
+              l3.textContent = "A";
+              l4.textContent = "";
+              l5.textContent = "";
+              l6.textContent = "";
+              l7.textContent = "";
+              palavra = 33;
+              letra7.textContent = "L";
+              letra15.textContent = "U";
+              letra1.textContent = "A";
+              letra9.textContent = "C";
+              letra4.textContent = "A";
+              letra3.textContent = "A";
+              break;
+          }
+          break;
+          case 13:
+          switch (palavraal) {
+            case 1:
+              l1.textContent = "M";
+              l2.textContent = "A";
+              l3.textContent = "C";
+              l4.textContent = "A";
+              l5.textContent = "C";
+              l6.textContent = "O";
+              l7.textContent = "";
+              palavra = 36;
+              letra7.textContent = "M";
+              letra15.textContent = "A";
+              letra1.textContent = "C";
+              letra9.textContent = "C";
+              letra4.textContent = "O";
+              letra3.textContent = "A";
+              break;
+          }
+          break;
+          case 14:
+          switch (palavraal) {
+            case 1:
+              l1.textContent = "N";
+              l2.textContent = "A";
+              l3.textContent = "R";
+              l4.textContent = "I";
+              l5.textContent = "Z";
+              l6.textContent = "";
+              l7.textContent = "";
+              palavra = 39;
+              letra7.textContent = "N";
+              letra15.textContent = "A";
+              letra1.textContent = "R";
+              letra9.textContent = "I";
+              letra4.textContent = "Z";
+              letra3.textContent = "A";
+              break;
+          }
+          break;
+          case 15:
+          switch (palavraal) {
+            case 1:
+              l1.textContent = "O";
+              l2.textContent = "V";
+              l3.textContent = "O";
+              l4.textContent = "";
+              l5.textContent = "";
+              l6.textContent = "";
+              l7.textContent = "";
+              palavra = 42;
+              letra7.textContent = "O";
+              letra15.textContent = "V";
+              letra1.textContent = "O";
+              letra9.textContent = "";
+              letra4.textContent = "";
+              letra3.textContent = "";
+              break;
+          }
+          break;
+          case 16:
+          switch (palavraal) {
+            case 1:
+              l1.textContent = "P";
+              l2.textContent = "A";
+              l3.textContent = "R";
+              l4.textContent = "";
+              l5.textContent = "";
+              l6.textContent = "";
+              l7.textContent = "";
+              palavra = 45;
+              letra7.textContent = "P";
+              letra15.textContent = "R";
+              letra1.textContent = "A";
+              letra9.textContent = "";
+              letra4.textContent = "A";
+              letra3.textContent = "A";
+              break;
+          }
+          break;
+          case 17:
+          switch (palavraal) {
+            case 1:
+              l1.textContent = "Q";
+              l2.textContent = "U";
+              l3.textContent = "I";
+              l4.textContent = "Z";
+              l5.textContent = "";
+              l6.textContent = "";
+              l7.textContent = "";
+              palavra = 48;
+              letra7.textContent = "Q";
+              letra15.textContent = "U";
+              letra1.textContent = "I";
+              letra9.textContent = "Z";
+              letra4.textContent = "Z";
+              letra3.textContent = "A";
+              break;
+          }
+          break;
+          case 18:
+          switch (palavraal) {
+            case 1:
+              l1.textContent = "R";
+              l2.textContent = "I";
+              l3.textContent = "O";
+              l4.textContent = "";
+              l5.textContent = "";
+              l6.textContent = "";
+              l7.textContent = "";
+              palavra = 51;
+              letra7.textContent = "R";
+              letra15.textContent = "I";
+              letra1.textContent = "O";
+              letra9.textContent = "U";
+              letra4.textContent = "A";
+              letra3.textContent = "A";
+              break;
+          }
+          break;
+          case 19:
+          switch (palavraal) {
+            case 1:
+              l1.textContent = "S";
+              l2.textContent = "O";
+              l3.textContent = "L";
+              l4.textContent = "";
+              l5.textContent = "";
+              l6.textContent = "";
+              l7.textContent = "";
+              palavra = 54;
+              letra7.textContent = "S";
+              letra15.textContent = "O";
+              letra1.textContent = "L";
+              letra9.textContent = "C";
+              letra4.textContent = "A";
+              letra3.textContent = "A";
+              break;
+          }
+          break;
+          case 20:
+          switch (palavraal) {
+            case 1:
+              l1.textContent = "T";
+              l2.textContent = "I";
+              l3.textContent = "A";
+              l4.textContent = "";
+              l5.textContent = "";
+              l6.textContent = "";
+              l7.textContent = "";
+              palavra = 57;
+              letra7.textContent = "T";
+              letra15.textContent = "I";
+              letra1.textContent = "A";
+              letra9.textContent = "C";
+              letra4.textContent = "A";
+              letra3.textContent = "A";
+              break;
+          }
+          break;
+          case 21:
+          switch (palavraal) {
+            case 1:
+              l1.textContent = "U";
+              l2.textContent = "R";
+              l3.textContent = "S";
+              l4.textContent = "O";
+              l5.textContent = "";
+              l6.textContent = "";
+              l7.textContent = "";
+              palavra = 60;
+              letra7.textContent = "U";
+              letra15.textContent = "R";
+              letra1.textContent = "S";
+              letra9.textContent = "O";
+              letra4.textContent = "S";
+              letra3.textContent = "D";
+              break;
+          }
+          break;
+          case 22:
+          switch (palavraal) {
+            case 1:
+              l1.textContent = "V";
+              l2.textContent = "A";
+              l3.textContent = "C";
+              l4.textContent = "A";
+              l5.textContent = "";
+              l6.textContent = "";
+              l7.textContent = "";
+              palavra = 63;
+              letra7.textContent = "V";
+              letra15.textContent = "A";
+              letra1.textContent = "D";
+              letra9.textContent = "C";
+              letra4.textContent = "A";
+              letra3.textContent = "A";
+              break;
+          }
+          break;
+          case 23:
+          switch (palavraal) {
+            case 1:
+              l1.textContent = "W";
+              l2.textContent = "A";
+              l3.textContent = "F";
+              l4.textContent = "F";
+              l5.textContent = "L";
+              l6.textContent = "E";
+              l7.textContent = "";
+              palavra = 66;
+              letra7.textContent = "F";
+              letra15.textContent = "W";
+              letra1.textContent = "A";
+              letra9.textContent = "L";
+              letra4.textContent = "E";
+              letra3.textContent = "";
+              break;
+          }
+          break;
+          case 24:
+          switch (palavraal) {
+            case 1:
+              l1.textContent = "X";
+              l2.textContent = "U";
+              l3.textContent = "X";
+              l4.textContent = "A";
+              l5.textContent = "";
+              l6.textContent = "";
+              l7.textContent = "";
+              palavra = 69;
+              letra7.textContent = "X";
+              letra15.textContent = "U";
+              letra1.textContent = "X";
+              letra9.textContent = "A";
+              letra4.textContent = "";
+              letra3.textContent = "";
+              break;
+          }
+          break;
+          case 25:
+          switch (palavraal) {
+            case 1:
+              l1.textContent = "Y";
+              l2.textContent = "O";
+              l3.textContent = "G";
+              l4.textContent = "A";
+              l5.textContent = "";
+              l6.textContent = "";
+              l7.textContent = "";
+              palavra = 72;
+              letra7.textContent = "O";
+              letra15.textContent = "G";
+              letra1.textContent = "Y";
+              letra9.textContent = "C";
+              letra4.textContent = "A";
+              letra3.textContent = "A";
+              break;
+          }
+          break;
+          case 26:
+          switch (palavraal) {
+            case 1:
+              l1.textContent = "Z";
+              l2.textContent = "I";
+              l3.textContent = "P";
+              l4.textContent = "E";
+              l5.textContent = "R";
+              l6.textContent = "";
+              l7.textContent = "";
+              palavra = 75;
+              letra7.textContent = "Z";
+              letra15.textContent = "I";
+              letra1.textContent = "P";
+              letra9.textContent = "E";
+              letra4.textContent = "R";
+              letra3.textContent = "A";
+              break;
+          }
         }
       }
 
