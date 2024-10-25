@@ -124,8 +124,8 @@ function dragElement(elmnt, atl) {
       pos2 = pos4 - e.clientY;
       pos3 = e.clientX;
       pos4 = e.clientY;
-      x = window.innerWidth;
-      y = window.innerHeight / 2.8;
+      xe = elmnt.offsetLeft;
+      ye = elmnt.offsetTop;
       switch (atl) {
         case 1:
           at = 1;
@@ -188,8 +188,6 @@ function dragElement(elmnt, atl) {
           acerto(y, x, xe, ye);
         break;
       }
-      xe = elmnt.offsetLeft - pos1;
-      ye = elmnt.offsetTop - pos2;
       elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
       elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
     }
@@ -858,7 +856,7 @@ function acerto(y, x, xe, ye) {
 
   ////////////////////////////////////////// 1
 
-  if(xe >= (x / 5) - 150 && xe <= (x / 5) + 70 && ye >= y - 80 && ye <= y + 50) {
+  if(xe >= l1.offsetLeft - 10 && xe <= l1.offsetLeft + 10 && ye >= l1.offsetTop - 10 && ye <= l1.offsetTop + 10) {
     if(ac == false) {
       if(at == 1 && palavra == 1 || at == 1 && palavra == 2) {
         letra1.style.display = "none";
@@ -948,11 +946,21 @@ function acerto(y, x, xe, ye) {
       l1.style.animationName = "brilho";
       ace1 = true;
     }
+    if(at == 7 && palavra == 16) {
+      letra7.style.display = "none";
+      l1.style.color = "#bbfccc";
+      act7 = true;
+      document.onmouseup = null;
+      document.onmousemove = null;
+      ac = true;
+      l1.style.animationName = "brilho";
+      ace1 = true;
+    }
 }
 
   ////////////////////////////////////////// 2
 
-  if(xe >= (x / 3.5) - 50 && xe <= (x / 3.5) + 80 && ye >= y - 50 && ye <= y + 50) {
+  if(xe >= l2.offsetLeft - 10 && xe <= l2.offsetLeft + 10 && ye >= l2.offsetTop - 10 && ye <= l2.offsetTop + 10) {
     if(ac3 == false) {
     if(at == 1 && palavra == 50) {
       letra1.style.display = "none";
@@ -1074,21 +1082,31 @@ function acerto(y, x, xe, ye) {
       l2.style.animationName = "brilho";
       ace2 = true;
     }
-    if(at == 7 && palavra == 16) {
-      letra7.style.display = "none";
-      l1.style.color = "#bbfccc";
-      act7 = true;
+    if(at == 4 && palavra == 16 && ace2 == false) {
+      letra4.style.display = "none";
+      l2.style.color = "#bbfccc";
+      act4 = true;
       document.onmouseup = null;
       document.onmousemove = null;
       ac = true;
-      l1.style.animationName = "brilho";
-      ace1 = true;
+      l2.style.animationName = "brilho";
+      ace2 = true;
+    }
+    else if(at == 3 && palavra == 16 && ace2 == false) {
+      letra3.style.display = "none";
+      l2.style.color = "#bbfccc";
+      act3 = true;
+      document.onmouseup = null;
+      document.onmousemove = null;
+      ac = true;
+      l2.style.animationName = "brilho";
+      ace2 = true;
     }
   }
   
   ////////////////////////////////////////// 3
 
-  if(xe >= (x / 2.6) - 50 && xe <= (x / 2.6) + 80 && ye >= y - 70 && ye <= y + 50) {
+  if(xe >= l3.offsetLeft - 10 && xe <= l3.offsetLeft + 10 && ye >= l3.offsetTop - 10 && ye <= l3.offsetTop + 10) {
     if(ac2 == false) {
       if(at == 1 && palavra == 1 || at == 1 && palavra == 4) {
         letra1.style.display = "none";
@@ -1199,31 +1217,21 @@ function acerto(y, x, xe, ye) {
     l3.style.animationName = "brilho";
     ace3 = true;
   }
-  if(at == 4 && palavra == 16 && ace2 == false) {
-    letra4.style.display = "none";
-    l2.style.color = "#bbfccc";
-    act4 = true;
+  if(at == 9 && palavra == 16) {
+    letra9.style.display = "none";
+    l3.style.color = "#bbfccc";
+    act9 = true;
     document.onmouseup = null;
     document.onmousemove = null;
     ac = true;
-    l2.style.animationName = "brilho";
-    ace2 = true;
-  }
-  else if(at == 3 && palavra == 16 && ace2 == false) {
-    letra3.style.display = "none";
-    l2.style.color = "#bbfccc";
-    act3 = true;
-    document.onmouseup = null;
-    document.onmousemove = null;
-    ac = true;
-    l2.style.animationName = "brilho";
-    ace2 = true;
+    l3.style.animationName = "brilho";
+    ace3 = true;
   }
 }
 
   ////////////////////////////////////////// 4
 
-  if(xe >= (x / 2) - 50 && xe <= (x / 2) + 70 && ye >= y - 70 && ye <= y + 50) {
+  if(xe >= l4.offsetLeft - 10 && xe <= l4.offsetLeft + 10 && ye >= l4.offsetTop - 10 && ye <= l4.offsetTop + 10) {
     if(ac2 == false) {
     if(at == 1 && palavra == 50) {
       letra1.style.display = "none";
@@ -1332,21 +1340,31 @@ function acerto(y, x, xe, ye) {
     l4.style.animationName = "brilho";
     ace4 = true;
   }
-  if(at == 9 && palavra == 16) {
-    letra9.style.display = "none";
-    l3.style.color = "#bbfccc";
-    act9 = true;
+  if(at == 4 && palavra == 16 && ace4 == false) {
+    letra4.style.display = "none";
+    l4.style.color = "#bbfccc";
+    act4 = true;
     document.onmouseup = null;
     document.onmousemove = null;
     ac = true;
-    l3.style.animationName = "brilho";
-    ace3 = true;
+    l4.style.animationName = "brilho";
+    ace4 = true;
+  }
+  else if(at == 3 && palavra == 16 && ace4 == false) {
+    letra3.style.display = "none";
+    l4.style.color = "#bbfccc";
+    act3 = true;
+    document.onmouseup = null;
+    document.onmousemove = null;
+    ac = true;
+    l4.style.animationName = "brilho";
+    ace4 = true;
   }
   }
   
   ////////////////////////////////////////// 5
 
-  if(xe >= (x / 1.7) - 120 && xe <= (x / 1.7) + 80 && ye >= y - 50 && ye <= y + 30) {
+  if(xe >= l5.offsetLeft - 10 && xe <= l5.offsetLeft + 10 && ye >= l5.offsetTop - 10 && ye <= l5.offsetTop + 10) {
     if(ac3 == false) {
       if(at == 1 && palavra == 1) {
         letra1.style.display = "none";
@@ -1448,31 +1466,11 @@ function acerto(y, x, xe, ye) {
             l5.style.animationName = "brilho";
             ace5 = true;
           }
-          if(at == 4 && palavra == 16 && ace4 == false) {
-            letra4.style.display = "none";
-            l4.style.color = "#bbfccc";
-            act4 = true;
-            document.onmouseup = null;
-            document.onmousemove = null;
-            ac = true;
-            l4.style.animationName = "brilho";
-            ace4 = true;
-          }
-          else if(at == 3 && palavra == 16 && ace4 == false) {
-            letra3.style.display = "none";
-            l4.style.color = "#bbfccc";
-            act3 = true;
-            document.onmouseup = null;
-            document.onmousemove = null;
-            ac = true;
-            l4.style.animationName = "brilho";
-            ace4 = true;
-          }
 }
 
   ////////////////////////////////////////// 6
 
-  if(xe >= (x * 0.65) - 50 && xe <= (x * 0.7) && ye >= y - 100 && ye <= y + 50) {
+  if(xe >= l6.offsetLeft - 10 && xe <= l6.offsetLeft + 10 && ye >= l6.offsetTop - 10 && ye <= l6.offsetTop + 10) {
     if(ac3 == false) {
       if(at == 1 && palavra == 2) {
         letra1.style.display = "none";
@@ -1585,7 +1583,7 @@ function acerto(y, x, xe, ye) {
   
   ////////////////////////////////////////// 7
 
-  if(xe >= (x * 0.80) - 120 && xe <= (x * 0.80) + 10 && ye >= y - 70 && ye <= y + 70) {
+  if(xe >= l7.offsetLeft - 10 && xe <= l7.offsetLeft + 10 && ye >= l7.offsetTop - 10 && ye <= l7.offsetTop + 10) {
     if(ac == false) {
     if(at == 1 && palavra == 50) {
       letra1.style.display = "none";
